@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cz.muni.fi.pa165</groupId>
+        <artifactId>eshop-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>eshop-js-angular1</artifactId>
+    <packaging>war</packaging>
+
+    <name>Web front end implemented in AngularJS 1</name>
+
+    <developers>
+        <developer>
+            <name>Martin Kuba</name>
+            <email>makub@ics.muni.cz</email>
+            <organization>ÚVT MU Brno</organization>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <!-- dependency on eshop sample data, other eshop parts are imported by transitive dependencies of this one-->
+        <dependency>
+            <groupId>cz.muni.fi.pa165</groupId>
+            <artifactId>eshop-js-server</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- servlet, JSP, JSTL -->
+        <!-- must be this instead of javaee-web for the springmvc-tests to succeed -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-api</artifactId>
+            <version>${tomcat.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <!-- what to do when only "mvn" is run -->
+        <defaultGoal>cargo:run</defaultGoal>
+        <!-- name of the produced war and the context path in URL -->
+        <finalName>eshop</finalName>
+        <plugins>
+            <!--  embedded tomcat 8 -->
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+</project>

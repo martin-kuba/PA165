@@ -1,9 +1,6 @@
 package cz.muni.fi.pa165.restapi.config;
 
-import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-import javax.servlet.Filter;
 
 /**
  * Replaces web.xml file.

@@ -104,6 +104,7 @@
         <module>eshop-spring-mvc</module>
         <module>eshop-rest</module>
         <module>eshop-ws</module>
-        <module>eshop-angular</module>
+        <module>eshop-js-server</module>
+        <module>eshop-js-angular1</module>
     </modules>
 </project>
