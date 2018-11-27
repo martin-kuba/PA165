@@ -106,5 +106,6 @@
         <module>eshop-ws</module>
         <module>eshop-js-server</module>
         <module>eshop-js-angular1</module>
+        <module>eshop-js-vuejs</module>
     </modules>
 </project>
